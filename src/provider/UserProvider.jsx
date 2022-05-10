@@ -18,6 +18,7 @@ function UserProvider({ children }) {
       })
       .catch((err) => console.log(err));
   }, []);
+  
   return (
     <UserContext.Provider value={{ usersList, setUsersList }}>
       {children}

@@ -10,4 +10,5 @@ export const Container = styled.button`
   border: 0;
   height: 100%;
   transition: 0.5s;
+  margin: 0 auto;
 `;

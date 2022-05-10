@@ -7,15 +7,16 @@ import { ContainerRegister } from "./styles";
 
 const Register = () => {
   const { setUsersList } = useUser();
-  const handleRegister = (payload) => {
+  const handleRegister = (payload, handleClose) => {
     axios
       .post("https://crud-job-space-ps.herokuapp.com/api/leads", payload)
       .then((response) => {
-        toast.success("Edição realizada!");
+        toast.success("Conta cadastrada!");
         api
           .get(`/api/leads/home`)
           .then((response) => {
             setUsersList(response.data);
+            handleClose()
           })
           .catch((err) => console.log(err));
       })

@@ -2,15 +2,15 @@ import styled, { css } from "styled-components";
 
 export const Conteiner = styled.div`
   width: 100%;
-  height: 50px;
+  height: 40px;
   color: grey;
-  margin: 40px auto;
+  margin: 35px auto;
 
   ${(props) =>
     props.errors &&
     css`
       color: red;
-      font-size: smaller;
+      font-size: x-small;
     `};
   input {
     width: 100%;
