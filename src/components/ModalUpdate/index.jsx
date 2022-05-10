@@ -3,9 +3,9 @@ import ButtonRegister from "../ButtonUi";
 import Modal from "@mui/material/Modal";
 import { BoxModal, ButtonClose } from "./styles";
 import "./styles";
-import RegisterForm from "../RegisterFormModal/From";
+import UpdateForm from "../UpdateFormModal/From";
 
-const ModalRegister = ({ handleRegister }) => {
+const ModalUpdate = ({ element }) => {
   const [open, setOpen] = useState(false);
 
   const handleOpen = () => {
@@ -18,7 +18,7 @@ const ModalRegister = ({ handleRegister }) => {
   return (
     <>
       <ButtonRegister type="button" onClick={handleOpen}>
-        CADASTRAR
+        EDITAR
       </ButtonRegister>
 
       <Modal
@@ -31,10 +31,10 @@ const ModalRegister = ({ handleRegister }) => {
           <ButtonClose>
             <ButtonRegister onClick={handleClose}>fechar</ButtonRegister>
           </ButtonClose>
-          <RegisterForm handleRegister={handleRegister} handleClose={handleClose}/>
+          <UpdateForm element={element} handleClose={handleClose}/>
         </BoxModal>
       </Modal>
     </>
   );
 };
-export default ModalRegister;
+export default ModalUpdate;

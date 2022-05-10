@@ -1,32 +1,17 @@
-// import axios from "axios";
-// import toast from "react-hot-toast";
-// import { api } from "../../services";
+import { useUser } from "../../provider/UserProvider";
 import ButtonUi from "../ButtonUi";
+import ModalUpdate from "../ModalUpdate";
 import { ButtonBox, Container } from "./styles";
 
 const Card = ({ element }) => {
-  const handleDelete = (data) => {
-    // const payload = { email: "testef@mail.com" };
-    // axios
-    //   .delete(
-    //     "https://crud-job-space-ps.herokuapp.com/api/leads/delete",
-    //     payload,
-    //     {
-    //       headers: { "Content-Type": "application/json; charset=utf-8" },
-    //     }
-    //   )
-    //   .then((response) => {
-    //     toast.success("Edição realizada!");
-    //   })
-    //   .catch((err) => toast.error("Erro ao editar"));
-  };
+  const { handleDelete } = useUser();
 
   return (
     <Container>
       <ButtonBox>
-        <ButtonUi>Editar</ButtonUi>
+        <ModalUpdate element={element} />
 
-        <ButtonUi onClick={handleDelete}>Deletar</ButtonUi>
+        <ButtonUi onClick={() => handleDelete(element)}>Deletar</ButtonUi>
       </ButtonBox>
 
       <p>
