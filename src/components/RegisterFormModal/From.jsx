@@ -8,7 +8,7 @@ import { BoxButton, InputCep } from "./styles";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const Form = ({ handleRegister , handleClose}) => {
+const RegisterForm = ({ handleRegister , handleClose}) => {
   const [inputValue, setInputValue] = useState("");
   const [inputCep, setInputCep] = useState("");
 
@@ -249,4 +249,4 @@ const Form = ({ handleRegister , handleClose}) => {
     </>
   );
 };
-export default Form;
+export default RegisterForm;

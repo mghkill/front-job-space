@@ -2,7 +2,7 @@ import { Toaster } from "react-hot-toast";
 import "./App.css";
 import Display from "./components/Display";
 import Header from "./components/Header";
-import Register from "./components/Register/Register";
+import Register from "./components/Register";
 
 function App() {
   return (
